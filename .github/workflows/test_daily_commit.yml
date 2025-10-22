@@ -1,17 +1,6 @@
-name: Daily GitHub Activity
+name: Test workflow
 
 on:
-  schedule:
-    # 8 schedules throughout the day (every ~3 hours) for natural distribution
-    # GitHub Actions adds natural jitter, so actual times will vary slightly
-    - cron: '0 0 * * *'   # 12:00 AM UTC
-    - cron: '0 3 * * *'   # 3:00 AM UTC
-    - cron: '0 6 * * *'   # 6:00 AM UTC
-    - cron: '0 9 * * *'   # 9:00 AM UTC
-    - cron: '0 12 * * *'  # 12:00 PM UTC
-    - cron: '0 15 * * *'  # 3:00 PM UTC
-    - cron: '0 18 * * *'  # 6:00 PM UTC
-    - cron: '0 21 * * *'  # 9:00 PM UTC
   workflow_dispatch:  # Allow manual triggering for testing
 
 jobs:
