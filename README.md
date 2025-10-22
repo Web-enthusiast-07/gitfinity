@@ -49,13 +49,19 @@ Just a GitHub account! Everything else runs in GitHub Actions (no installation, 
 
 **Quick Start:**
 
-1. **Fork this repository** to your GitHub account
-   - Click the "Fork" button at the top right of this page
+1. **Use this repository as a template** (⚠️ **IMPORTANT**: Do NOT fork!)
+   - Click the green **"Use this template"** button at the top right of this page
+   - Select **"Create a new repository"**
+   - Choose a name for your repository (e.g., `my-github-activity`)
+   - Make sure it's set to **Public** (required for contribution graph)
+   - Click **"Create repository"**
+
+   **Why not fork?** Commits in forked repositories don't count toward your GitHub contribution graph!
 
 2. **Enable GitHub Actions**:
-   - Go to your forked repository on GitHub
+   - Go to your new repository on GitHub
    - Click the "Actions" tab
-   - Click the green "I understand my workflows, go ahead and enable them" button
+   - Click the green "I understand my workflows, go ahead and enable them" button (if prompted)
 
 3. **Configure workflow permissions**:
    - Go to **Settings** → **Actions** → **General**
@@ -64,24 +70,22 @@ Just a GitHub account! Everything else runs in GitHub Actions (no installation, 
    - Check **"Allow GitHub Actions to create and approve pull requests"** (optional)
    - Click **Save**
 
-4. **Activate scheduled workflows** (Important!):
+4. **Activate the workflow**:
 
-   GitHub disables scheduled workflows in forks by default. To activate them:
-
-   **Option A - Trigger manually (Recommended):**
    - Go to **Actions** tab → **"Daily GitHub Activity"** workflow
-   - Click **"Enable workflow"** if prompted
-   - Click **"Run workflow"** → **"Run workflow"** button
-   - This activates the schedule for future automatic runs
-
-   **Option B - Make any commit:**
-   - Edit any file (like this README) and commit
-   - This will activate all workflows including the schedule
+   - Click **"Run workflow"** → **"Run workflow"** button to test it immediately
+   - The scheduled runs will start automatically after the first manual run
 
 5. **Verify it's working**:
    - Check the **Actions** tab for successful workflow runs
    - Look for new commits appearing in `activity.log`
-   - Check your contribution graph (may take a few minutes to update)
+   - Check your contribution graph after 24 hours (GitHub may take time to update)
+
+**✅ Why commits will count:**
+- Commits use your GitHub noreply email (automatically configured)
+- Repository created from template (not a fork)
+- Commits made to default branch (main)
+- Repository is public
 
 ### Advanced Configuration (Optional)
 
@@ -200,5 +204,11 @@ This is meant for maintaining GitHub activity and learning automation. The commi
 - ✅ Variable commit count using weighted distribution
 - ✅ Efficient execution (0-15 min delays)
 - ✅ Automatic log file management
+
+**Contribution graph requirements:**
+- ✅ Uses your GitHub account email (via noreply address)
+- ✅ Commits to default branch (main)
+- ✅ Must use as template, NOT fork
+- ✅ Repository must be public
 
 The randomization ensures your activity looks natural and human-like!
