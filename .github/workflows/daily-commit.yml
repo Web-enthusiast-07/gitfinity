@@ -48,6 +48,7 @@ jobs:
 
       - name: Push changes (if any commits were made)
         run: |
+          git fetch origin
           if [ -z "$(git log origin/main..HEAD)" ]; then
             echo "No commits to push"
           else
